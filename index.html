@@ -1,56 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-ul{
+    <style>
+        ul {
 
-    list-style-type: none;
-max-width: 200%;
-max-height: 100%;
+            list-style-type: none;
+            max-width: 200%;
+            max-height: 100%;
 
-}
+        }
 
-li{
-    display: inline;
-     padding:30px;
-     font-style: italic;
-     font-size: 30px;
-    margin-left:50px;
-  padding-bottom: 50%;
+        li {
+            display: inline;
+            padding: 30px;
+            font-style: italic;
+            font-size: 30px;
+            margin-left: 50px;
+            padding-bottom: 50%;
 
 
- 
-}
-.li1{
-    margin-left: 400px;
-}
-body{
-    background-image: url('https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=' ) ;
-   background-repeat: no-repeat;
-   background-size: cover;
 
-}
+        }
+
+        .li1 {
+            margin-left: 400px;
+        }
+
+        body {
+            font-weight: bold;
+            background-image: url('https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.6);
+            background-blend-mode: lighten;
+
+        }
+
+       .para .img{
+        display: inline;
+       }
+       .para{
+        width: 600px;
+       }
+       .img{
+        float: right ;
+        margin-top: -100px;
+        box-shadow: 8px 6px 8px ;
+        margin-bottom: 100px;
+       
+       }
+
+       form{
+        border: 2px solid ;
+        max-width: 200px;
+        max-height: 400px;
+        padding: 30px;
+        padding-left: 50px;
+        border-radius: 8px;
+        background-color: rgb(136, 167, 167,0.8);
+       }
+     .nav{
+        margin-bottom: 300px;
+     }
+
+     .reg{
+        padding-left: 400px;
+     
+     }
+
     </style>
-  
+
 </head>
-<body >
-    <div  class="nav">
-    <ul>
-    <li class="li1">Home </li>
-    <li class="li2">Contact</li>
-    <li class="li3">About US</li>
-    <li><img style="width:50px;height:50px;padding-top:10px" src="java_image.webp" alt=""></li>
-    
-</ul>
+
+<body>
+    <div class="nav" >
+        <ul>
+            <li class="li1">Home </li>
+            <li class="li2">Contact</li>
+            <li class="li3">About US</li>
+            <li><img style="width:50px;height:50px;padding-top:10px" src="java_image.webp" alt=""></li>
+
+        </ul>
+
+        <div class="para">
+            <p>At Cloud Institution, your trusted tech education hub in BTM Layout, Bangalore, and Coimbatore we provide
+                personalized, hands-on training in AWS, Azure, Google Cloud, DevOps, Java, UI/UX Design, Data Analytics,
+                Python, Digital Marketing, Terraform, Kubernetes, and more—blending real-world projects, expert
+                mentorship, and certifications to launch your cloud career.
+
+            </p>
+        </div>
+        <div class="img">
+            <img src="java_image.webp" width="300px" height="300px">
+        </div>
+
+    </div>
 
 
-<p>At Cloud Institution, your trusted tech education hub in BTM Layout, Bangalore, and Coimbatore we provide personalized, hands-on training in AWS, Azure, Google Cloud, DevOps, Java, UI/UX Design, Data Analytics, Python, Digital Marketing, Terraform, Kubernetes, and more—blending real-world projects, expert mentorship, and certifications to launch your cloud career.
-
-  </p>
+<div class="reg">
+    <form >
+        <input type="text" id="fname" placeholder="First name"><br><br>
+        <input type="text" id="lname" placeholder="Last name"><br><br>
+        <input type="number" id="contact" placeholder="Contact Number"><br><br>
+        <input type="email" id="email" placeholder="email"><br><br>
+        <textarea name="" id="" placeholder="address"></textarea><br><br>
+        <input type="submit">
+        
+    </form> 
 </div>
-
 </body>
+
 </html>
