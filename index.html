@@ -56,23 +56,47 @@
 
        form{
         border: 2px solid ;
-        max-width: 200px;
-        max-height: 400px;
+        max-width: 500px;
+        max-height: 1000px;
         padding: 30px;
-        padding-left: 50px;
+        padding-left: 100px;
         border-radius: 8px;
-        background-color: rgb(136, 167, 167,0.8);
+        background-color: rgb(136, 167, 167,0.5);
+        padding-bottom: 100px;
+        padding-top: 40px;
        }
      .nav{
         margin-bottom: 300px;
+        
      }
 
      .reg{
         padding-left: 400px;
      
      }
+       input{
+        width: 400px;
+        padding:10px;
+           border: 1px solid ;
+        box-shadow: 7px 4px 8px ;
+        border-radius: 10px;
+    }
+        
+    
 
+    input:hover{
+        background-color:rgb(177, 208, 209);
+        padding: 10px;
+        border: 1px solid ;
+        box-shadow: 7px 4px 8px ;
+        border-radius: 10px;
+    }
+    h1{
+        font-size: 30px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
     </style>
+  
 
 </head>
 
@@ -103,14 +127,20 @@
 
 <div class="reg">
     <form >
+        <h1> Registration Form</h1>
         <input type="text" id="fname" placeholder="First name"><br><br>
         <input type="text" id="lname" placeholder="Last name"><br><br>
         <input type="number" id="contact" placeholder="Contact Number"><br><br>
         <input type="email" id="email" placeholder="email"><br><br>
-        <textarea name="" id="" placeholder="address"></textarea><br><br>
-        <input type="submit">
-        
+        <textarea  style="width:415px;   border: 1px solid ;
+        box-shadow: 7px 4px 8px ;
+        border-radius: 10px;
+    " name="" id="" placeholder="address"></textarea><br><br>
+        <input style="width:100px;margin-left:150px;background-color:rgb(20, 90, 220);font-weight: bold;color:white" type="submit">
     </form> 
+
+
+
 </div>
 </body>
 
