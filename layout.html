@@ -17,8 +17,7 @@
             transform: skew(30deg);
             transition: transform 7s ease-in;
                 background:conic-gradient(red, yellow, green, blue, red);
-           
-
+    
         }
         @media (max-width:600px) {
             p{
@@ -34,6 +33,22 @@
             }
         }
 
+        a:link{
+            text-decoration: dashed;
+        }
+   a:visited{
+    color: green;
+   }
+   a:hover{
+    color: red;
+   }
+   a:active{
+    color: blue;
+   }
+
+   img{
+    filter:brightness(40%)
+   }
     </style>
 </head>
 <body>
@@ -59,7 +74,56 @@
     Your browser does not support the video tag.
   </video>
   <audio src="C:\Users\kiran\Downloads\audio.mp3" controls></audio>
+  <!-- block tags : starts in the next line or new line -->
+<div></div>,<h1></h1>,<p></p>,<form></form>,<table></table>,<ul></ul>,<ol></ol>,<li></li>
+<!-- inline tags : starts in the same line   -->
+<span>hi this is shweta </span> 
+<b>hello</b> <i></i> 
+<blockquote cite="https://cloudinstitution.com/">At Cloud Institution, your trusted tech education hub in BTM Layout, Bangalore, and Coimbatore we provide personalized, hands-on training in AWS, Azure, Google Cloud, DevOps, Java, Data Analytics, Python, Terraform, Kubernetes, and more—blending real-world projects, 
+    expert mentorship, and certifications to launch your cloud career.</blockquote>
 </footer>
+
+<pre>heloo      
+    this 
+    is 
+    shweta
+</pre>
+<code>
+    <h1>hello world </h1>
+</code>
+<h1><q>"hello world"</q></h1>
+<abbr title="hyper text markup language">HTML</abbr>
+
+<img src="assets/java-for-developers.webp" alt="">
+<a href="https://cloudinstitution.com/">cloud institution</a>
+
+<input type="file">
+<input type="date">
+
+<p>what is html</p>
+<input type="radio" id="hyper" name="html" >
+<label for="hyper">hyper text markup language</label>
+<input type="radio" id="hyper1" name="html">
+<label for="hyper1">hyper taxt markup language</label>
+<input type="radio" id="hyper2"  name="html">
+<label for="hyper2">hyper text makeup language</label>
+<br>
+
+<input type="checkbox" id="hyper" name="html" >
+<label for="hyper">hyper text markup language</label>
+<input type="checkbox" id="hyper1" name="html">
+<label for="hyper1">hyper taxt markup language</label>
+<input type="checkbox" id="hyper2"  name="html">
+<label for="hyper2">hyper text makeup language</label>
+
+
+<select name="" id="" >
+    <option value="java">java</option>
+    <option value="python" selected>python</option>
+    <option value="c++" selected>c++</option>
+    <option value="javascript">javascript</option>
+</select>
+
 
 </body>
 </html>
