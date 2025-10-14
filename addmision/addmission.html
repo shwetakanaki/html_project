@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admission Registration Form</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+      padding:24px;
+    }
+
+    .container{
+      width:100%;
+      max-width:920px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow: 0 8px 30px rgba(32,41,54,0.08);
+      padding:28px;
+      box-sizing:border-box;
+    }
+
+    h1{
+      margin:0 0 6px 0;
+      font-size:20px;
+      color:#0f172a;
+    }
+
+    p.lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+
+    .full-width{
+      grid-column: 1 / -1;
+    }
+
+    label{
+      display:block;
+      font-size:13px;
+      margin-bottom:6px;
+      color:#0f172a;
+      font-weight:600;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6e9ee;
+      background: #fff;
+      box-sizing:border-box;
+      font-size:14px;
+      color:#0f172a;
+      outline: none;
+      transition: box-shadow .15s, border-color .15s;
+    }
+
+    input:focus, textarea:focus, select:focus{
+      border-color: var(--accent);
+      box-shadow: 0 4px 18px rgba(37,99,235,0.12);
+    }
+
+    textarea{
+      min-height:110px;
+      resize:vertical;
+      line-height:1.4;
+    }
+
+    .note{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:flex-end;
+      grid-column: 1 / -1;
+      margin-top:6px;
+    }
+
+    button{
+      padding:10px 16px;
+      border-radius:10px;
+      border:0;
+      font-weight:600;
+      cursor:pointer;
+      font-size:14px;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:white;
+      box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+    }
+
+    .btn-ghost{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid #e6e9ee;
+    }
+
+    .form-row{
+      display:flex;
+      gap:12px;
+    }
+
+    .help{
+      font-size:13px;
+      color:#ef4444;
+    }
+
+    /* Responsive */
+    @media (max-width:720px){
+      form{ grid-template-columns: 1fr; }
+      .actions{ justify-content:stretch; flex-direction:column-reverse; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="title">
+    <h1 id="title">Admission Registration Form</h1>
+    <p class="lead">Please fill in the details below. Fields marked with * are required.</p>
+
+    <form id="admissionForm" novalidate>
+      <!-- Full Name -->
+      <div class="full-width">
+        <label for="fullName">Full Name *</label>
+        <input id="fullName" name="fullName" type="text" placeholder="Your full name" required />
+        <div class="note">Enter your given name and surname.</div>
+      </div>
+
+      <!-- DOB -->
+      <div>
+        <label for="dob">Date of Birth (DOB) *</label>
+        <input id="dob" name="dob" type="date" required />
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <label for="contact">Contact Number *</label>
+        <input id="contact" name="contact" type="tel" placeholder="+91 98765 43210" pattern="^\+?[0-9\s\-]{7,20}$" required />
+        <div class="note">Include country code if applicable (e.g., +91).</div>
+      </div>
+
+      <!-- Email (optional but useful) -->
+      <div>
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+      </div>
+
+      <!-- Address -->
+      <div class="full-width">
+        <label for="address">Address *</label>
+        <textarea id="address" name="address" placeholder="Street address, city, state, postal code" required></textarea>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <label for="education">Highest Education *</label>
+        <select id="education" name="education" required>
+          <option value="">-- Select education level --</option>
+          <option>High School (10th / 12th)</option>
+          <option>Diploma</option>
+          <option>Bachelor's Degree (B.A., B.Sc., B.Tech...)</option>
+          <option>Master's Degree (M.A., M.Sc., M.Tech...)</option>
+          <option>Ph.D.</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Institution / Course (optional) -->
+      <div>
+        <label for="institution">Institution / Course (optional)</label>
+        <input id="institution" name="institution" type="text" placeholder="Name of college / school / course" />
+      </div>
+
+      <!-- Action buttons -->
+      <div class="actions">
+        <button type="button" class="btn-ghost" id="resetBtn">Reset</button>
+        <button type="submit" class="btn-primary">Submit Registration</button>
+      </div>
+
+      <!-- Error / success area -->
+      <div id="messageArea" class="full-width" aria-live="polite" style="margin-top:8px;"></div>
+    </form>
+  </div>
+
+  <script>
+    (function(){
+      const form = document.getElementById('admissionForm');
+      const msg = document.getElementById('messageArea');
+      const resetBtn = document.getElementById('resetBtn');
+
+      function showMessage(text, isError){
+        msg.textContent = text;
+        msg.className = isError ? 'help' : '';
+      }
+
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        showMessage('', false);
+      });
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        showMessage('', false);
+
+        // Use built-in validity first
+        if (!form.checkValidity()) {
+          // find first invalid field and focus it
+          const firstInvalid = form.querySelector(':invalid');
+          firstInvalid.focus();
+          showMessage('Please fill out the required fields correctly.', true);
+          return;
+        }
+
+        // Gather form data
+        const data = {
+          fullName: form.fullName.value.trim(),
+          dob: form.dob.value,
+          contact: form.contact.value.trim(),
+          email: form.email.value.trim(),
+          address: form.address.value.trim(),
+          education: form.education.value,
+          institution: form.institution.value.trim()
+        };
+
+        // Simple additional validation example: DOB cannot be future date
+        const dobDate = new Date(data.dob);
+        const today = new Date();
+        if (dobDate > today) {
+          showMessage('Date of Birth cannot be in the future.', true);
+          form.dob.focus();
+          return;
+        }
+
+        // For demo: show the captured data (replace with fetch to send to server)
+        showMessage('Registration captured — check console for data (demo).', false);
+        console.log('Admission registration data:',data);
+
+        // Optionally clear the form after submit:
+        // form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>

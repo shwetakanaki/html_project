@@ -101,7 +101,7 @@
 <input type="date">
 
 <p>what is html</p>
-<input type="radio" id="hyper" name="html" >
+<input type="radio" id="hyper" name="html"  required>
 <label for="hyper">hyper text markup language</label>
 <input type="radio" id="hyper1" name="html">
 <label for="hyper1">hyper taxt markup language</label>
@@ -123,6 +123,32 @@
     <option value="c++" selected>c++</option>
     <option value="javascript">javascript</option>
 </select>
+
+<script>
+/* let a=10;
+ let b=20;
+ let c=a+b;
+ console.log(c);*/
+ function add(){
+    let a=10;
+ let b=20;
+ let c=a+b;
+ var d=90;
+ const pi=3.14;
+document.getElementById('demo').innerHTML=c;
+ }
+
+
+</script>
+<h1 id="demo">thank you </h1>
+
+<p id="test">hello world  </p>
+<input type="submit" onclick="alert('Thank you for registering ');"><br/>
+
+<input type="submit" onclick="document.getElementById('demo').innerHTML='thank you for registering';">
+<button onclick="document.getElementById('test').innerHTML='thank you for registering';">click here</button>
+<button onclick="add();">click here</button>
+<button onclick="add();">click here</button>
 
 
 </body>
